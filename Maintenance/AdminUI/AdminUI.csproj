@@ -7,6 +7,9 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="microsoft.entityframeworkcore.sqlserver" Version="2.0.0" />
+    <PackageReference Include="microsoft.entityframeworkcore.tools" Version="2.0.0" />
+    <PackageReference Include="microsoft.visualstudio.web.codegeneration.design" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
