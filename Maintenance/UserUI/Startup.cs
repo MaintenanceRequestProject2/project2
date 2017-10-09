@@ -22,6 +22,7 @@ namespace UserUI
         public void ConfigureServices(IServiceCollection services)
         {
             // Add MVC Service
+            services.AddSingleton<IConfiguration>(Configuration);
             services.AddMvc();
         }
 
