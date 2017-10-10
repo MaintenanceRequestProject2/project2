@@ -31,14 +31,23 @@ namespace UserUI.Controllers
 
             Repair repair1 = new Repair(1, 1, 2850, "Broken Washer", "", "Open");
             Repair repair2 = new Repair(1, 1, 2850, "Ceiling Fan", "It's Dusty", "Open");
+
             return new Repair[] { repair1, repair2 };
+           
+
         }
 
         // GET: api/Repairs/5
         [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        public IActionResult Get(int id)
         {
-            return "value";
+            var repairGuy = db.Repairs.FirstOrDefault((p) => p.Id == id);
+            if (repairGuy == null)
+            {
+                return NotFound();
+            }
+
+            return new ObjectResult(repairGuy);
         }
         
         // POST: api/Repairs
