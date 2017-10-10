@@ -6,10 +6,12 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdminUI", "AdminUI\AdminUI.csproj", "{AA09E3D8-AAD0-480B-941E-6BC36FC4BAE5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserUI", "UserUI\UserUI.csproj", "{D69F8F09-8B87-48E3-B08B-2A37CC134D13}"
+feature
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAPI", "WebAPI\WebAPI.csproj", "{2980773C-28A5-4708-BFAE-F885AE1A68FE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{046EF61C-462F-4CCE-B9F8-0D93F62E3C14}"
+ master
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
