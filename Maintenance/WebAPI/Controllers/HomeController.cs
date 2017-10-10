@@ -31,9 +31,7 @@ namespace UserUI.Controllers
 
         public IActionResult Error()
         {
-#pragma warning disable CS0436 // Type conflicts with imported type
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-#pragma warning restore CS0436 // Type conflicts with imported type
         }
     }
 }
