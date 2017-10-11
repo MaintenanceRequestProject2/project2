@@ -1,0 +1,12 @@
+/Users/roo/Projects/MaintRules/MaintAPI/obj/Debug/netcoreapp2.0/MaintAPI.csprojResolveAssemblyReference.cache
+/Users/roo/Projects/MaintRules/MaintAPI/obj/Debug/netcoreapp2.0/MaintAPI.csproj.CoreCompileInputs.cache
+/Users/roo/Projects/MaintRules/MaintAPI/obj/Debug/netcoreapp2.0/MaintAPI.AssemblyInfoInputs.cache
+/Users/roo/Projects/MaintRules/MaintAPI/obj/Debug/netcoreapp2.0/MaintAPI.AssemblyInfo.cs
+/Users/roo/Projects/MaintRules/MaintAPI/bin/Debug/netcoreapp2.0/libe_sqlite3.dylib
+/Users/roo/Projects/MaintRules/MaintAPI/bin/Debug/netcoreapp2.0/MaintAPI.deps.json
+/Users/roo/Projects/MaintRules/MaintAPI/bin/Debug/netcoreapp2.0/MaintAPI.runtimeconfig.json
+/Users/roo/Projects/MaintRules/MaintAPI/bin/Debug/netcoreapp2.0/MaintAPI.runtimeconfig.dev.json
+/Users/roo/Projects/MaintRules/MaintAPI/bin/Debug/netcoreapp2.0/MaintAPI.dll
+/Users/roo/Projects/MaintRules/MaintAPI/bin/Debug/netcoreapp2.0/MaintAPI.pdb
+/Users/roo/Projects/MaintRules/MaintAPI/obj/Debug/netcoreapp2.0/MaintAPI.dll
+/Users/roo/Projects/MaintRules/MaintAPI/obj/Debug/netcoreapp2.0/MaintAPI.pdb
