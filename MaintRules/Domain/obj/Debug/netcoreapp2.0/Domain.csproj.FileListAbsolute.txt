@@ -1,0 +1,11 @@
+/Users/roo/Projects/MaintRules/Domain/bin/Debug/netcoreapp2.0/Domain.deps.json
+/Users/roo/Projects/MaintRules/Domain/bin/Debug/netcoreapp2.0/Domain.runtimeconfig.json
+/Users/roo/Projects/MaintRules/Domain/bin/Debug/netcoreapp2.0/Domain.runtimeconfig.dev.json
+/Users/roo/Projects/MaintRules/Domain/bin/Debug/netcoreapp2.0/Domain.dll
+/Users/roo/Projects/MaintRules/Domain/bin/Debug/netcoreapp2.0/Domain.pdb
+/Users/roo/Projects/MaintRules/Domain/obj/Debug/netcoreapp2.0/Domain.csprojResolveAssemblyReference.cache
+/Users/roo/Projects/MaintRules/Domain/obj/Debug/netcoreapp2.0/Domain.csproj.CoreCompileInputs.cache
+/Users/roo/Projects/MaintRules/Domain/obj/Debug/netcoreapp2.0/Domain.AssemblyInfoInputs.cache
+/Users/roo/Projects/MaintRules/Domain/obj/Debug/netcoreapp2.0/Domain.AssemblyInfo.cs
+/Users/roo/Projects/MaintRules/Domain/obj/Debug/netcoreapp2.0/Domain.dll
+/Users/roo/Projects/MaintRules/Domain/obj/Debug/netcoreapp2.0/Domain.pdb
