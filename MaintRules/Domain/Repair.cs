@@ -36,10 +36,5 @@ namespace MaintRules.Domain
             ActiveFlag = activeFlag;
         }
 
-        public void CompleteRepair()
-        {
-            Status = "Resolved";
-            ActiveFlag = false;
-        }
     }
 }

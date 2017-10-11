@@ -14,6 +14,8 @@ namespace UserUI.Controllers
     [Route("api/Repairs")]
     public class RepairsController : Controller
     {
+
+        // Db Context
         private RegistrationDatabaseContext db = new RegistrationDatabaseContext();
 
         IConfiguration _configuration;
@@ -33,9 +35,15 @@ namespace UserUI.Controllers
             Repair repair2 = new Repair(1, 1, 2850, "Ceiling Fan", "It's Dusty", "Open");
 
             return new Repair[] { repair1, repair2 };
-           
-
         }
+
+        // GET AND DISPLAY
+        [Route("GetRepairJobs")]
+        public IQueryable<Repairs> GetRepairJobs()
+        {
+            return db.Repairs.AsQueryable();
+        }
+
 
         // GET: api/Repairs/5
         [HttpGet("{id}", Name = "Get")]
