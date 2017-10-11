@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using AdminUI.DataLayer;
+using Microsoft.Extensions.Configuration;
+using DataLayer.Models;
 
 namespace WebAPI.Controllers
 {
@@ -13,18 +15,25 @@ namespace WebAPI.Controllers
     [Route("api/Workers")]
     public class WorkersController : Controller
     {
-        private readonly RegistrationDatabaseContext _context;
+        //private readonly RegistrationDatabaseContext _context;
+        private RegistrationDatabaseContext db = new RegistrationDatabaseContext();
 
-        public WorkersController(RegistrationDatabaseContext context)
+        IConfiguration _configuration;
+
+        public WorkersController(IConfiguration configuration)
         {
-            _context = context;
+            _configuration = configuration;
         }
 
         // GET: api/Workers
         [HttpGet]
-        public IEnumerable<Workers> GetWorkers()
+        public IEnumerable<Worker> GetWorkers()
         {
-            return _context.Workers;
+            String connectionString = _configuration.GetConnectionString("MainDB");
+
+
+            Worker worker1 = new Worker(1, "John", "Branthony", "yes@yes.com", "jbran", "pw", "worker");    
+            return new Worker[] { worker1 };
         }
 
         // GET: api/Workers/5
@@ -36,7 +45,7 @@ namespace WebAPI.Controllers
                 return BadRequest(ModelState);
             }
 
-            var workers = await _context.Workers.SingleOrDefaultAsync(m => m.Id == id);
+            var workers = await db.Workers.SingleOrDefaultAsync(m => m.Id == id);
 
             if (workers == null)
             {
@@ -60,11 +69,11 @@ namespace WebAPI.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(workers).State = EntityState.Modified;
+            db.Entry(workers).State = EntityState.Modified;
 
             try
             {
-                await _context.SaveChangesAsync();
+                await db.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -90,10 +99,10 @@ namespace WebAPI.Controllers
                 return BadRequest(ModelState);
             }
 
-            _context.Workers.Add(workers);
+            db.Workers.Add(workers);
             try
             {
-                await _context.SaveChangesAsync();
+                await db.SaveChangesAsync();
             }
             catch (DbUpdateException)
             {
@@ -119,21 +128,21 @@ namespace WebAPI.Controllers
                 return BadRequest(ModelState);
             }
 
-            var workers = await _context.Workers.SingleOrDefaultAsync(m => m.Id == id);
+            var workers = await db.Workers.SingleOrDefaultAsync(m => m.Id == id);
             if (workers == null)
             {
                 return NotFound();
             }
 
-            _context.Workers.Remove(workers);
-            await _context.SaveChangesAsync();
+            db.Workers.Remove(workers);
+            await db.SaveChangesAsync();
 
             return Ok(workers);
         }
 
         private bool WorkersExists(int id)
         {
-            return _context.Workers.Any(e => e.Id == id);
+            return db.Workers.Any(e => e.Id == id);
         }
     }
 }
