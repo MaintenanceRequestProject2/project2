@@ -22,7 +22,14 @@ namespace MaintAPI.Models
 
         public class CreateTenantModel
         {
-            
+            public int TenantID { get; set; }
+            public string First { get; set; }
+            public string Last { get; set; }
+            public string Email { get; set; }
+            public int Phone { get; set; }
+            public string Password { get; set; }
+            public string Role { get; set; }
+            public bool ActiveFlag { get; set; }
         }
     }
 }
