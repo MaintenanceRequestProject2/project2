@@ -12,9 +12,8 @@ namespace MaintRules.Domain
         public int Phone { get; set; }
         public string Password { get; set; }
         public string Role { get; set; }
-        public bool ActiveFlag { get; set; }
 
-        public Worker(int workerID, string first, string last, string email, int phone, string password, string role, bool activeFlag)
+        public Worker(int workerID, string first, string last, string email, int phone, string password, string role)
         {
             WorkerID = workerID;
             First = first;
@@ -23,7 +22,6 @@ namespace MaintRules.Domain
             Phone = phone;
             Password = password;
             Role = role;
-            ActiveFlag = activeFlag;
         }
 
         public Repair AssignToSelf(Repair r)
@@ -62,7 +60,7 @@ namespace MaintRules.Domain
         {
             var res = new Repair(t.TenantID, issue, issuedetails);
 
-            if (ActiveFlag) 
+            if (t.ActiveFlag) 
             {
                 return res;
             } else {

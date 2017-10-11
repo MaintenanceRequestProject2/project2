@@ -43,10 +43,10 @@ namespace MaintRules.Domain
 
         public Repair CreateRepair(string issue, string issuedetails) 
         {
-            var res = new Repair(TenantID, issue, issuedetails);
 
             if (ActiveFlag) 
             {
+                var res = new Repair(TenantID, issue, issuedetails);
                 return res;
             } else {
                 return null;

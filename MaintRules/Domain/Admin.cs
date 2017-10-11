@@ -5,25 +5,23 @@ namespace MaintRules.Domain
 {
     public class Admin
     {
-        public int WorkerID { get; set; }
+        public int AdminID { get; set; }
         public string First { get; set; }
         public string Last { get; set; }
         public string Email { get; set; }
         public int Phone { get; set; }
         public string Password { get; set; }
         public string Role { get; set; }
-        public bool ActiveFlag { get; set; }
 
-        public Admin(int workerID, string first, string last, string email, int phone, string password, string role, bool activeFlag)
+        public Admin(int adminID, string first, string last, string email, int phone, string password, string role)
         {
-            WorkerID = workerID;
+            AdminID = adminID;
             First = first;
             Last = last;
             Email = email;
             Phone = phone;
             Password = password;
             Role = role;
-            ActiveFlag = activeFlag;
         }
 
         public Repair AssignToOther(Repair r, Worker w)
@@ -51,7 +49,7 @@ namespace MaintRules.Domain
         {
             var res = new Repair(t.TenantID, issue, issuedetails);
 
-            if (ActiveFlag)
+            if (t.ActiveFlag)
             {
                 return res;
             }
@@ -80,21 +78,14 @@ namespace MaintRules.Domain
 
         public Worker AddWorker(int workerID, string first, string last, string email, int phone, string password, string role)
         {
-            var res = new Worker(workerID, first, last, email, phone, password, role, true);
+            var res = new Worker(workerID, first, last, email, phone, password, role);
             return res;
         }
 
-        public Worker DeactivateWorker(Worker w) 
-        {
-            w.ActiveFlag = false;
-            return w;
+        public static void Main(){
+            
         }
 
-        public Worker ReactivateWorker(Worker w)
-        {
-            w.ActiveFlag = true;
-            return w;
-        }
     }
 }
 
